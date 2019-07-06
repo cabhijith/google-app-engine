@@ -54,6 +54,6 @@ async def analyze(request):
     prediction = str(learn.predict(img)[0])
     return JSONResponse({'result':str(learn.predict(img)[0])}
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     if 'serve' in sys.argv: uvicorn.run(app, host='0.0.0.0', port=8080)
     
